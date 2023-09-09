@@ -7,10 +7,11 @@ export const generateToken = (userId, res) => {
   });
 
   res.cookie("jwt", token, {
-    maxAge: 7 * 24 * 60 * 60 * 1000,                // 7 days in milliseconds (ms)
-    httpOnly: true,                                 // HTTP-only to prevent Cross-Site Scripting (XSS) attacks
-    sameSite: "strict",                             // Strict SameSite to prevent Cross-Site Request Forgery (CSRF) attacks
-    secure: process.env.NODE_ENV !== "development", // only send cookie over HTTPS in production
+    maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milliseconds
+    httpOnly: true,
+    sameSite: "none", // Changed to 'none' to allow cross-site cookies
+    secure: true, // Always use secure in production
+    domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
   });
 
   return token;
