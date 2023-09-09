@@ -1,0 +1,48 @@
+# ====================
+# Global Ignores
+# ====================
+node_modules/
+.env
+.env.*.local
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS and IDE
+Thumbs.db
+ehthumbs.db
+*.swp
+.vscode/
+.idea/
+*.sublime-*
+
+# Misc
+*.tgz
+*.zip
+
+# ====================
+# Backend (Node/Express)
+# ====================
+backend/node_modules/
+backend/.env
+backend/dist/
+backend/coverage/
+backend/logs/
+
+# ====================
+# Frontend (React)
+# ====================
+frontend/node_modules/
+frontend/build/
+frontend/.env
+frontend/.next/
+frontend/.cache/
+frontend/.turbo/
+frontend/coverage/
+
+# Optional: if using test files or storybook
+frontend/*.test.*
+frontend/*.stories.*
