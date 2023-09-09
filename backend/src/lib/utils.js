@@ -11,7 +11,7 @@ export const generateToken = (userId, res) => {
     httpOnly: true,
     sameSite: "none", // Changed to 'none' to allow cross-site cookies
     secure: true, // Always use secure in production
-    domain: process.env.NODE_ENV === "production" ? ".onrender.com" : undefined
+    domain: process.env.NODE_ENV === "production" ? "echochat-dtlr.onrender.com" : undefined
   });
 
   return token;

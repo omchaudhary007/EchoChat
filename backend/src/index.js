@@ -19,7 +19,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173", "https://echochat-dtlr.onrender.com"],
+    origin: ["http://localhost:5173", "https://echochat-dtlr.onrender.com", "https://echochat-sand.vercel.app"],
     credentials: true,
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
